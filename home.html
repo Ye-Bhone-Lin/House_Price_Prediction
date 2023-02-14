@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <style>
+        body {
+          background-image: url('static/imgs/Artboard 1-100.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;  
+          background-size: 100% 100%;
+        }
+
+        .container{
+            margin-left: 40px;
+            margin-top: 60px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            justify-content: left;
+        }
+
+        .form-container{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .span-container{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .span-container{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        h1{
+            margin-left: 40px;
+            margin-top: 60px;
+        }
+
+        </style>
+</head>
+<body>
+    <h1 style="color:white;">House Price Prediction</h1>
+    <div class="container">
+<div>
+<form action="http://localhost:5000/home" class="form-container" method='post'>
+    <input type="text" name="longitude" placeholder="longitude">
+    <input type="text" placeholder="latitude" name="latitude">
+    <input type="text" placeholder="housing_median_age" name="housing_median_age">
+    <input type="text" placeholder="total_rooms"  name="total_rooms">
+     <input type="text" placeholder="total_bedrooms" name="total_bedrooms">
+     <input type="text" placeholder="population" name="population">
+    <input type="text" placeholder="households" name="households">
+    <input type="text" placeholder="median_income"  name="median_income">
+    <input type = "submit"> 
+</form>
+</div>
+<div class="span-container">
+<span style="color:white;">Your choices are</span>
+<span style="color:white;">longitude: {{longitude}}</span>
+<span style="color:white;">latitude: {{latitude}}</span>
+<span style="color:white;">housing_median_age: {{housing_median_age}}</span>
+<span style="color:white;">total_rooms: {{total_rooms}}</span>
+<span style="color:white;">total_bedrooms: {{total_bedrooms}}</span>
+<span style="color:white;">population: {{population}}</span>
+<span style="color:white;">households: {{households}}</span>
+<span style="color:white;">median_income: {{median_income}}</span>
+</div>
+</div>
+<div class="span-container">
+    <p></p>
+<span style="color:white;">Result_prediction {{result_prediction}}</span>
+</div>
+</body>
+</html>
